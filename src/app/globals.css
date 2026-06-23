@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-honey-50: #FFF8E7;
+  --color-honey-100: #FFEBC2;
+  --color-honey-200: #FFD990;
+  --color-honey-300: #F5A623;
+  --color-honey-400: #E09000;
+  --color-honey-500: #D4850A;
+  --color-honey-600: #B86E00;
+  --color-honey-700: #8A5200;
+  --color-honey-800: #5C3700;
+  --color-honey-900: #2E1B00;
+  --color-organic: #4CAF50;
+  --color-wood: #8B6914;
+  --font-arabic: var(--font-tajawal);
+}
+
+:root {
+  --bg-base: #FFF8E7;
+  --bg-card: #FFFFFF;
+  --bg-surface: #F5F0E0;
+  --text-primary: #2E1B00;
+  --text-secondary: #5C3700;
+  --text-muted: #8A6F47;
+  --border-light: rgba(245, 166, 35, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(245, 166, 35, 0.15);
+}
+
+[data-theme="dark"] {
+  --bg-base: #0F0F0F;
+  --bg-card: #1A1A1A;
+  --bg-surface: #262626;
+  --text-primary: #FFF8E7;
+  --text-secondary: #FFEBC2;
+  --text-muted: rgba(255, 235, 194, 0.6);
+  --border-light: rgba(245, 166, 35, 0.1);
+  --glass-bg: rgba(26, 26, 26, 0.6);
+  --glass-border: rgba(245, 166, 35, 0.1);
+}
+
+body {
+  font-family: var(--font-tajawal), sans-serif;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes honey-drip {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(10px); opacity: 0.7; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px #F5A623, 0 0 10px rgba(245, 166, 35, 0.25); }
+  50% { box-shadow: 0 0 20px #F5A623, 0 0 40px rgba(245, 166, 35, 0.38), 0 0 60px rgba(245, 166, 35, 0.13); }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #F5A623 var(--bg-surface);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #F5A623;
+  color: var(--bg-base);
+}
+
+.honey-cursor {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23F5A623' opacity='0.8'%3E%3Ccircle cx='12' cy='12' r='6'/%3E%3C/svg%3E") 12 12, auto;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-strong {
+  background: color-mix(in srgb, var(--bg-card) 85%, transparent);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid var(--glass-border);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #F5A623, #FFD990, #F5A623);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.honey-glow {
+  box-shadow: 0 0 15px rgba(245, 166, 35, 0.3), 0 0 30px rgba(245, 166, 35, 0.1);
+}
+
+.honey-border {
+  border: 1px solid var(--border-light);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
