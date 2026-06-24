@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
-import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
   const { scrollY } = useScrollPosition();
@@ -48,7 +47,6 @@ export function Navbar() {
             <span>💬</span>
             واتساب
           </a>
-          <ThemeToggle />
         </div>
       </div>
     </motion.nav>

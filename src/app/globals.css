@@ -28,18 +28,6 @@
   --glass-border: rgba(245, 166, 35, 0.15);
 }
 
-[data-theme="dark"] {
-  --bg-base: #0F0F0F;
-  --bg-card: #1A1A1A;
-  --bg-surface: #262626;
-  --text-primary: #FFF8E7;
-  --text-secondary: #FFEBC2;
-  --text-muted: rgba(255, 235, 194, 0.6);
-  --border-light: rgba(245, 166, 35, 0.1);
-  --glass-bg: rgba(26, 26, 26, 0.6);
-  --glass-border: rgba(245, 166, 35, 0.1);
-}
-
 body {
   font-family: var(--font-tajawal), sans-serif;
   background: var(--bg-base);

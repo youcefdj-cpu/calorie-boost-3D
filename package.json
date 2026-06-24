@@ -9,8 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@react-three/drei": "^10.7.7",
-    "@react-three/fiber": "^9.6.1",
     "@sanity/image-url": "^1.0.0",
     "@sanity/vision": "^3.99.0",
     "framer-motion": "^12.40.0",
@@ -19,10 +17,7 @@
     "next-sanity": "^9.0.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "react-error-boundary": "^6.1.2",
     "sanity": "^3.99.0",
-    "styled-components": "^6.4.2",
-    "three": "^0.184.0",
     "zustand": "^5.0.14"
   },
   "devDependencies": {

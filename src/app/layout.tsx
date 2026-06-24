@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Tajawal } from "next/font/google";
-import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import "./globals.css";
 
 const tajawal = Tajawal({
@@ -24,12 +23,9 @@ export default function RootLayout({
       dir="rtl"
       lang="ar"
       className={`${tajawal.variable} h-full`}
-      data-theme="dark"
     >
-      <body className="min-h-full antialiased" suppressHydrationWarning>
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+      <body className="min-h-full antialiased">
+        {children}
       </body>
     </html>
   );
